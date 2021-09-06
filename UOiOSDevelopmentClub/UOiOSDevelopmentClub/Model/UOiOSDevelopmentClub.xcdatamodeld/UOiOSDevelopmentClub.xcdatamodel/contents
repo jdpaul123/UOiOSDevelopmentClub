@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Admin" representedClassName=".Admin" syncable="YES">
+        <attribute name="email" attributeType="String" defaultValueString="&quot;&quot;"/>
+        <attribute name="isTrashed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="uid" attributeType="String" defaultValueString="&quot;&quot;"/>
+    </entity>
+    <entity name="Event" representedClassName=".Event" syncable="YES">
+        <attribute name="about" attributeType="String" defaultValueString=""/>
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="-31550400" usesScalarValueType="NO"/>
+        <attribute name="isTrashed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="event" inverseEntity="Location"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="address" attributeType="String" defaultValueString=""/>
+        <attribute name="city" attributeType="String" defaultValueString=""/>
+        <attribute name="country" attributeType="String" defaultValueString=""/>
+        <attribute name="directionsNotes" attributeType="String" defaultValueString=""/>
+        <attribute name="isTrashed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="state" attributeType="String" defaultValueString=""/>
+        <attribute name="zipCode" attributeType="String" defaultValueString=""/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Event" inverseName="location" inverseEntity="Event"/>
+    </entity>
+    <entity name="Member" representedClassName=".Member" syncable="YES">
+        <attribute name="about" attributeType="String" defaultValueString=""/>
+        <attribute name="email" attributeType="String" defaultValueString=""/>
+        <attribute name="isTrashed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="phone" attributeType="String" defaultValueString=""/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="position" attributeType="String" defaultValueString=""/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="-54" positionY="36" width="128" height="119"/>
+        <element name="Location" positionX="-36" positionY="45" width="128" height="149"/>
+        <element name="Member" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Admin" positionX="-45" positionY="81" width="128" height="74"/>
+    </elements>
+</model>

@@ -1,0 +1,60 @@
+University of Oregon iOS Development Club Application for iOS Proposal
+JD Paul
+June 30, 2021
+
+Overview:
+    Tab bar at the bottom with three tabs left to right:
+        - Welcome
+        - Calendar
+        - Executive Board and Advisors
+    
+    The application will store data in Cloud Kit and Core Data so that it can be updated at any time for all users to see.
+    I plan to use UIKit to build out the application
+    I plan to upload this application by August 31 to the app store for club members to download
+    I also hope to port the data for this app to a website in the furutre
+    Push notifications for events a day before and then an hour before them.
+
+Welcome:
+    - Provides basic information about the club including events, links to our website, and our mission
+    - It does not need to be on Core Data as it is just static information that only needs to be updated when formal app updates are released
+    - Maybe after I will add the data to Core Data/CloudKit (CD/CK) for the text
+
+Calendar:
+    - Probably the most complicated part
+    - This will be a UITableView that orders the events from the top to bottom of the screen from soonest to farthest away event date wise
+    - The events will be clickable and contain information about location, time, date, and an image (usually the location of the event)
+    - The calendar data will live locally on CD and pulled from CK.
+        - That way I will be able to update data through the CK portal
+        - From https://developer.apple.com/icloud/cloudkit/
+            - Store your app’s data in iCloud and keep everything up-to-date across devices and on the web. Featuring efficient syncing, as well as simple monitoring and 
+            management, it’s never been easier to build and grow your apps with CloudKit. Store private data securely in your users’ iCloud accounts for limitless scale 
+            as your user base grows, and get up to 1PB of storage for your app’s public data.
+    - Also, there will be a pull down to update the calendar feature
+
+Executive Board and Advisors:
+    - This will be implimented as vertical list similar to the calendar
+    - There will be a few sections:
+        - Executive board (President, Vice President, Secratary, etc)
+        - Faculty Advisor (Eric Wills currently)
+        - Alumnus Advisors (Franklin Smith, Nick Bonat)
+    - Each person will have a picture of them on the left side of the cell in a circle boarder
+    - To the right of their profile picture will be their name, contact information, and a description about who they are
+
+Core Data/Cloud Kit:
+    - I will have to learn hwo to use Cloud Kit with CD
+    - I will impliment the application with Core Data and then impliment Cloud Kit with it
+    Data Models:
+        - Events
+            - Properties: Date, Time, Description, Image, Location (this is a relationship)
+        - Location
+            - Address, City, Zip Code, State, Country
+        - Members
+            - peroperties: ProfilePicture, Name, Position, Description, email, phoneNumber?
+
+    For now:
+        - edit through the dashboard
+
+    Ideally:
+       - Login Button for admin
+           - That would unlock adding and deleting events in the event page
+           - And adding other admins
