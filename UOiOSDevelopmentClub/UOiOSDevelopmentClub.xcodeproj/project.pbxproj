@@ -41,9 +41,9 @@
 		52AE72CF26E1D09000E5FFD7 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */; };
 		52AE72D126E1DC3400E5FFD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */; };
 		52B2A3A226E2A6AC00DF8AF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3A126E2A6AC00DF8AF7 /* Constants.swift */; };
-		52B2A3A926E3278400DF8AF7 /* Admin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3A726E3278400DF8AF7 /* Admin+CoreDataProperties.swift */; };
-		52B2A3AA26E3278400DF8AF7 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3A826E3278400DF8AF7 /* Admin.swift */; };
 		52B2A3AC26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */; };
+		52E5B71F26E5D133002B7F08 /* Admin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5B71D26E5D133002B7F08 /* Admin+CoreDataProperties.swift */; };
+		52E5B72026E5D133002B7F08 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5B71E26E5D133002B7F08 /* Admin.swift */; };
 		52FE029E26B8B83900158FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE029D26B8B83900158FA2 /* AppDelegate.swift */; };
 		52FE02A026B8B83900158FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE029F26B8B83900158FA2 /* SceneDelegate.swift */; };
 		52FE02A526B8B83900158FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FE02A326B8B83900158FA2 /* Main.storyboard */; };
@@ -120,9 +120,9 @@
 		52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
 		52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B2A3A126E2A6AC00DF8AF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		52B2A3A726E3278400DF8AF7 /* Admin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Admin+CoreDataProperties.swift"; path = "/Users/jpaul/Repos/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		52B2A3A826E3278400DF8AF7 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Admin.swift; path = /Users/jpaul/Repos/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin.swift; sourceTree = "<absolute>"; };
 		52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtonItem+Makeinvisable.swift"; sourceTree = "<group>"; };
+		52E5B71D26E5D133002B7F08 /* Admin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Admin+CoreDataProperties.swift"; path = "../../../../../Desktop/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52E5B71E26E5D133002B7F08 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Admin.swift; path = ../../../../../Desktop/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin.swift; sourceTree = "<group>"; };
 		52FE029A26B8B83900158FA2 /* UOiOSDevelopmentClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UOiOSDevelopmentClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FE029D26B8B83900158FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FE029F26B8B83900158FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -387,8 +387,8 @@
 			isa = PBXGroup;
 			children = (
 				52FE02A626B8B83900158FA2 /* UOiOSDevelopmentClub.xcdatamodeld */,
-				52B2A3A826E3278400DF8AF7 /* Admin.swift */,
-				52B2A3A726E3278400DF8AF7 /* Admin+CoreDataProperties.swift */,
+				52E5B71E26E5D133002B7F08 /* Admin.swift */,
+				52E5B71D26E5D133002B7F08 /* Admin+CoreDataProperties.swift */,
 				5284536426BCECB600397144 /* Location.swift */,
 				5284536526BCECB600397144 /* Location+CoreDataProperties.swift */,
 				5284536626BCECB600397144 /* Event.swift */,
@@ -698,7 +698,6 @@
 				52AE72CD26E1D08000E5FFD7 /* Styling.swift in Sources */,
 				5218646926D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift in Sources */,
 				5228DC6C26E1B02A00C55429 /* LogInViewController.swift in Sources */,
-				52B2A3A926E3278400DF8AF7 /* Admin+CoreDataProperties.swift in Sources */,
 				52FE02DF26B9048F00158FA2 /* Injector.swift in Sources */,
 				5284537C26C0AEDA00397144 /* MemberListCell.swift in Sources */,
 				52FE02DD26B8FF0800158FA2 /* WelcomeViewController.swift in Sources */,
@@ -706,11 +705,12 @@
 				529ACC0926D42F5800F337D2 /* MemberAddViewController.swift in Sources */,
 				5284536C26BCECB600397144 /* Event.swift in Sources */,
 				5284536A26BCECB600397144 /* Location.swift in Sources */,
-				52B2A3AA26E3278400DF8AF7 /* Admin.swift in Sources */,
 				5284537A26BF4B8000397144 /* MemberListViewController.swift in Sources */,
+				52E5B72026E5D133002B7F08 /* Admin.swift in Sources */,
 				5284536F26BCECB600397144 /* Member+CoreDataProperties.swift in Sources */,
 				52FE029E26B8B83900158FA2 /* AppDelegate.swift in Sources */,
 				5228DC6E26E1B0EF00C55429 /* PickSignInOptionViewController.swift in Sources */,
+				52E5B71F26E5D133002B7F08 /* Admin+CoreDataProperties.swift in Sources */,
 				52FE02A026B8B83900158FA2 /* SceneDelegate.swift in Sources */,
 				52FE02E726BCB13F00158FA2 /* EventsListViewControler.swift in Sources */,
 				5284536E26BCECB600397144 /* Member.swift in Sources */,
