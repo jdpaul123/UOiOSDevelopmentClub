@@ -24,6 +24,7 @@ class MemberDetailViewController: UIViewController {
     private let member: Member
     private let viewControllerFactory: ViewControllerFactory
 
+    // MARK: IBOutlets
     @IBOutlet private var imageView: UIImageView?
     @IBOutlet private var nameLabel: UILabel?
     @IBOutlet private var positionLabel: UILabel?
@@ -46,6 +47,7 @@ class MemberDetailViewController: UIViewController {
         phoneLabel?.text = member.phone
     }
     
+    // MARK: IBSequeAction
     @IBSegueAction private func createMemberEditViewController(_ coder: NSCoder) -> MemberEditViewController? {
         return viewControllerFactory.memberEditViewController(coder, member: member)
     }
@@ -62,10 +64,4 @@ class MemberDetailViewController: UIViewController {
             editMemberButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
         }
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        navigationItem.title = member.name
-//        setMemberDetailData(member: member)
-//    }
 }

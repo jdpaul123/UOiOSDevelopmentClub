@@ -10,6 +10,9 @@ import UIKit
 
 extension UIView {
     func formattedDate(date: Date) -> String {
+        /*
+         Formatting the date for events to show the data in a easily understandable way
+         */
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = .current
         dateFormatter.locale = .current
@@ -19,6 +22,9 @@ extension UIView {
     }
     
     func formattedTime(date:Date) -> String {
+        /*
+         Formatting the time from the data stored in the event to be easity understood by users
+         */
         let timeFormatter = DateFormatter()
         timeFormatter.timeZone = .current
         timeFormatter.locale = .current
@@ -28,6 +34,9 @@ extension UIView {
     }
     
     func formattedLocation(location: Location) -> String {
+        /*
+         Formattign the location to be easirt understood by users in event entities
+         */
         "\(location.address), \(location.city), \(location.state) \(location.zipCode)"
     }
 }

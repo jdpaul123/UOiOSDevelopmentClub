@@ -76,8 +76,6 @@ class WelcomeViewController: UIViewController {
                 try Auth.auth().signOut()
                 self.navigationItem.leftBarButtonItem?.title = "Admin Log In"
                 Injector.shared.isSignedInAsAdmin = false
-                // set the button back to being a log in button
-//                self.navigationItem.leftBarButtonItem = self.savedBarButtonState
             } catch let err {
                 print(err)
             }
@@ -91,6 +89,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func setupConstraints(welcomeScreen: UIViewController) {
+        // Programatic constraints for the SwiftUI view stored in the WelcomeViewController
         welcomeScreen.view.translatesAutoresizingMaskIntoConstraints = false
         welcomeScreen.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         welcomeScreen.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true

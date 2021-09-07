@@ -8,6 +8,11 @@
 import Foundation
 
 class ViewControllerFactory {
+    /*
+     Used for implimentation of dependency injection,
+     THis file holds a reference to the dependencies initialized in the injector which is then used to
+     instantiate new view controllers.
+     */
     
     init(viewFactory: ViewFactory, dataRepository: DataRepository) {
         self.viewFactory = viewFactory

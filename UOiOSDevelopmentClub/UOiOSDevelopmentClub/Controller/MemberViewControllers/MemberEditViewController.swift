@@ -23,6 +23,7 @@ class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITe
     private let member: Member
     private let dataRepository: DataRepository
     
+    // MARK: IBOutlets
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
     @IBOutlet weak var nameField: UITextField!
@@ -35,6 +36,8 @@ class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up the data for editing
         nameField.text = member.name
         positionField.text = member.position
         phoneField.text = member.phone
@@ -42,6 +45,7 @@ class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITe
         aboutField.text = member.about
         imagePickerView.image = UIImage.init(data: member.picture)
         
+        // Set the delegates of the fields to control hiding the keyboard
         nameField.delegate = self
         positionField.delegate = self
         phoneField.delegate = self
@@ -70,6 +74,7 @@ class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITe
         aboutField.resignFirstResponder()
     }
     
+    // MARK: IBActions
     @IBAction func pickImageButtonPressed() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
@@ -112,6 +117,7 @@ class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITe
     }
 }
 
+// MARK: Extensions used for image picker
 extension MemberEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {

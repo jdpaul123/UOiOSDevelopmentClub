@@ -8,5 +8,6 @@
 import Foundation
 
 extension Notification.Name {
+    // Used so as a way to test that the dataRepo is initialized
     static let dataRepositoryInitializationFinished = Notification.Name("DataRepositoryInitializationFinished")
 }

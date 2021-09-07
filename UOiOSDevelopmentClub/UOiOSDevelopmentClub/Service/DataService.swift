@@ -10,8 +10,13 @@ import CoreData
 import UIKit
 
 class DataService: DataRepository {
+    /*
+     DataService is used for all CoreData/CloudKit related actions such as adding, deleting,
+     and fetching entities. It is also used to save edits
+     */
     
     func eventOrMemberEdited() {
+        // Used for saving edits in editing view controllers
         saveViewContext()
     }
     

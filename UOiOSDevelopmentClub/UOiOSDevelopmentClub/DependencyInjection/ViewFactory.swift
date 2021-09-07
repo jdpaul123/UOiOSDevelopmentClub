@@ -8,6 +8,9 @@
 import Foundation
 
 class ViewFactory {
+    /*
+     Used to instantiate SwiftUI views that are needed to be embeded in UIKit view controllers
+     */
     func createWelcomeView() -> Welcome {
         Welcome()
     }

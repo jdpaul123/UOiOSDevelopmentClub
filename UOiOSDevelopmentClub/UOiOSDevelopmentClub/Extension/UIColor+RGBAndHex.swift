@@ -10,6 +10,8 @@ import UIKit
 
 extension UIColor {
     /*
+     This is used to set up a UIColor w/o dividing by 255 or using a hex value to define
+     the color.
      https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values
      
      Examples:

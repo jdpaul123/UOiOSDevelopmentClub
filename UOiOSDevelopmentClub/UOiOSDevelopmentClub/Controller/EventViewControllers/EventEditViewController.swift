@@ -123,8 +123,6 @@ extension EventEditViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         informationView.resignFirstResponder()
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

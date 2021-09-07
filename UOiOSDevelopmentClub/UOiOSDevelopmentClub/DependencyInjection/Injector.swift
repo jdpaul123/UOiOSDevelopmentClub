@@ -11,6 +11,10 @@ import CoreData
 import FirebaseAuth
 
 class Injector: NSObject, NSFetchedResultsControllerDelegate {
+    /*
+     The injector stores all the dependencies that the app (ie. view controllers) need
+     to function correctly. It also allwos for easy unit testing.
+     */
     private override init() {
         viewFactory = ViewFactory()
         

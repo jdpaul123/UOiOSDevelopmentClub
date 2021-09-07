@@ -40,7 +40,6 @@
 		52AE72CD26E1D08000E5FFD7 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE72CC26E1D08000E5FFD7 /* Styling.swift */; };
 		52AE72CF26E1D09000E5FFD7 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */; };
 		52AE72D126E1DC3400E5FFD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */; };
-		52B2A3A226E2A6AC00DF8AF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3A126E2A6AC00DF8AF7 /* Constants.swift */; };
 		52B2A3AC26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */; };
 		52E5B71F26E5D133002B7F08 /* Admin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5B71D26E5D133002B7F08 /* Admin+CoreDataProperties.swift */; };
 		52E5B72026E5D133002B7F08 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5B71E26E5D133002B7F08 /* Admin.swift */; };
@@ -119,7 +118,6 @@
 		52AE72CC26E1D08000E5FFD7 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
 		52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		52B2A3A126E2A6AC00DF8AF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtonItem+Makeinvisable.swift"; sourceTree = "<group>"; };
 		52E5B71D26E5D133002B7F08 /* Admin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Admin+CoreDataProperties.swift"; path = "../../../../../Desktop/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52E5B71E26E5D133002B7F08 /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Admin.swift; path = ../../../../../Desktop/iOSDevelopmentClubApp/UOiOSDevelopmentClub/UOiOSDevelopmentClub/Model/Admin.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 			children = (
 				52AE72CC26E1D08000E5FFD7 /* Styling.swift */,
 				52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */,
-				52B2A3A126E2A6AC00DF8AF7 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -715,7 +712,6 @@
 				52FE02E726BCB13F00158FA2 /* EventsListViewControler.swift in Sources */,
 				5284536E26BCECB600397144 /* Member.swift in Sources */,
 				52FE02EB26BCB4A500158FA2 /* DataService.swift in Sources */,
-				52B2A3A226E2A6AC00DF8AF7 /* Constants.swift in Sources */,
 				52FE02E126B9049D00158FA2 /* ViewFactory.swift in Sources */,
 				529ACC0B26D4338D00F337D2 /* MemberEditViewController.swift in Sources */,
 				5218646D26D80CDB00118DC5 /* EventEditViewController.swift in Sources */,

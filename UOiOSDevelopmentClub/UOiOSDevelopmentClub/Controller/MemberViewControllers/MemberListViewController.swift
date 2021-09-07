@@ -84,11 +84,6 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         tableView.accessibilityIdentifier = "members-tableview"
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        tableView.reloadData()
-//    }
-    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
         

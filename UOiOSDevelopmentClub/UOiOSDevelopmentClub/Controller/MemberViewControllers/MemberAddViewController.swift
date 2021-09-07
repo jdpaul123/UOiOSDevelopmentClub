@@ -11,6 +11,7 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
     // MARK: Properties
     let dataRepository: DataRepository
     
+    // MARK: IBOutlets
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
     @IBOutlet weak var nameField: UITextField!
@@ -19,6 +20,10 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var aboutField: UITextView!
     
+    // Help for creating the image picker from IOS Academy YouTube channel: https://www.youtube.com/watch?v=yggOGEzueFk
+    @IBOutlet var imageView: UIImageView!
+    
+    // MARK: Initializaiton
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,6 +46,9 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
         self.view.addGestureRecognizer(tapGesture)
     }
     
+
+
+    // MARK: TextFieldDelegate functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameField.resignFirstResponder()
         positionField.resignFirstResponder()
@@ -58,7 +66,8 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
         emailField.resignFirstResponder()
         aboutField.resignFirstResponder()
     }
-    
+
+    // MARK: IBActions
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -67,9 +76,6 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
         dataRepository.addMember(about: aboutField.text ?? "", position: positionField.text ?? "", email: emailField.text ?? "", phone: phoneField.text ?? "", name: nameField.text ?? "", picture: imageView.image?.toData ?? Data.init())
         dismiss(animated: true, completion: nil)
     }
-    
-    // Help for creating the image picker from IOS Academy YouTube channel: https://www.youtube.com/watch?v=yggOGEzueFk
-    @IBOutlet var imageView: UIImageView!
     
     @IBAction func pickImageButtonPressed() {
         let imagePickerController = UIImagePickerController()
@@ -80,6 +86,8 @@ class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITex
     }
 }
 
+
+// MARK: Extension used for Image Picker
 extension MemberAddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
