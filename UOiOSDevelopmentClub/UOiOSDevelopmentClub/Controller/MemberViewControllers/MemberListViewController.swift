@@ -77,7 +77,7 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = UIColor.init(.green)
+        tableView.backgroundColor = UIColor(.black)
         
         // Gets rid of extra horizontal lines after the last cell in the table view
         tableView.tableFooterView = UIView(frame: .zero)

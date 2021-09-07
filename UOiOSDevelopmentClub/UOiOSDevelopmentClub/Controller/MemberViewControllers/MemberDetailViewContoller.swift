@@ -10,6 +10,8 @@ import UIKit
 class MemberDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView?.contentMode = .scaleAspectFill
+        imageView?.layer.cornerRadius = (imageView?.frame.size.width)! / 2
     }
     
     // MARK: Initializer
