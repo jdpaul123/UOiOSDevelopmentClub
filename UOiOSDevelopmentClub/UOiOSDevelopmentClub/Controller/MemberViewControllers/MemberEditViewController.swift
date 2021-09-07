@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemberEditViewController: UITableViewController {
+class MemberEditViewController: UITableViewController, UITextFieldDelegate, UITextViewDelegate  {
     // MARK: Initializer
     init?(_ coder: NSCoder, member: Member, dataRepository: DataRepository) {
         self.member = member
@@ -41,6 +41,33 @@ class MemberEditViewController: UITableViewController {
         emailField.text = member.email
         aboutField.text = member.about
         imagePickerView.image = UIImage.init(data: member.picture)
+        
+        nameField.delegate = self
+        positionField.delegate = self
+        phoneField.delegate = self
+        emailField.delegate = self
+        
+        // Next 4 lines are for dismissing the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        positionField.resignFirstResponder()
+        phoneField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when a click is processed outside the keyboard or a field to dismiss the keyboard
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameField.resignFirstResponder()
+        positionField.resignFirstResponder()
+        phoneField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        aboutField.resignFirstResponder()
     }
     
     @IBAction func pickImageButtonPressed() {

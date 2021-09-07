@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class EventAddViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class EventAddViewController: UITableViewController, NSFetchedResultsControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     // MARK: Properties
     var locationResultsController: NSFetchedResultsController<Location>? = nil
@@ -99,5 +99,23 @@ extension EventAddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         locationPicker.delegate = self
         locationPicker.dataSource = self
+        
+        // Next 4 lines are for dismissing the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
+        locationPicker.delegate = self
+        locationPicker.dataSource = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleField.resignFirstResponder()
+        return true
+    }
+    
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        titleField.resignFirstResponder()
+        informationView.resignFirstResponder()
     }
 }

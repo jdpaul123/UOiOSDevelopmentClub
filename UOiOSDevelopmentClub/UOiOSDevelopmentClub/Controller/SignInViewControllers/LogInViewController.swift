@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import CoreData
 
-class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -119,6 +119,14 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        // Next 4 lines are for dismissing the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
         setUpElements()
     }
     
@@ -131,5 +139,20 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
         Utilities.styleTextField(passwordTextField)
         
         Utilities.styleFilledButton(logInButton)
+    }
+    
+    // UITextField Delegate Functions
+    
+    // For hiding the keyboard on return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 }

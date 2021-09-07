@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class EventEditViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class EventEditViewController: UITableViewController, NSFetchedResultsControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     // MARK: Properties
     var locationResultsController: NSFetchedResultsController<Location>? = nil
@@ -117,8 +117,20 @@ extension EventEditViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         selectedLocation = locationResultsController?.fetchedObjects?[row] ?? Location.init() // SHOULD NOT RETURN Location.init()
     }
     
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        titleField.resignFirstResponder()
+        informationView.resignFirstResponder()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Next 4 lines are for dismissing the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
         
         locationPicker.delegate = self
         locationPicker.dataSource = self
@@ -130,5 +142,13 @@ extension EventEditViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         
         informationView.text = event.about
         imageView.image = UIImage.init(data: event.picture ?? Data.init())
+        
+        titleField.delegate = self
+        informationView.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleField.resignFirstResponder()
+        return true
     }
 }

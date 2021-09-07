@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemberAddViewController: UITableViewController {
+class MemberAddViewController: UITableViewController, UITextFieldDelegate, UITextViewDelegate  {
     // MARK: Properties
     let dataRepository: DataRepository
     
@@ -30,6 +30,33 @@ class MemberAddViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameField.delegate = self
+        positionField.delegate = self
+        phoneField.delegate = self
+        emailField.delegate = self
+        aboutField.delegate = self
+        
+        // Next 4 lines are for dismissing the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        positionField.resignFirstResponder()
+        phoneField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when a click is processed outside the keyboard or a field to dismiss the keyboard
+    @objc
+    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameField.resignFirstResponder()
+        positionField.resignFirstResponder()
+        phoneField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        aboutField.resignFirstResponder()
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
