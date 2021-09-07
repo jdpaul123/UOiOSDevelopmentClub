@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MemberListCell: UITableViewCell {
     @IBOutlet private var nameLabel: UILabel?
     @IBOutlet private var positionLabel: UILabel?
@@ -19,5 +20,7 @@ class MemberListCell: UITableViewCell {
         profileImageView?.image = UIImage.init(data: data)
         profileImageView?.contentMode = .scaleAspectFill
         profileImageView?.layer.cornerRadius = (profileImageView?.frame.size.width)! / 2
+        profileImageView?.layer.borderWidth = 2.0
+        profileImageView?.layer.borderColor = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
     }
 }

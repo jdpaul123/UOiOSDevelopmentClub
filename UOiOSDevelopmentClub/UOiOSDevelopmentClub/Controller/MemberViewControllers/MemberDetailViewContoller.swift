@@ -8,11 +8,6 @@
 import UIKit
 
 class MemberDetailViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView?.contentMode = .scaleAspectFill
-        imageView?.layer.cornerRadius = (imageView?.frame.size.width)! / 2
-    }
     
     // MARK: Initializer
     init?(member: Member, coder: NSCoder, viewControllerFactory: ViewControllerFactory) {
@@ -40,6 +35,10 @@ class MemberDetailViewController: UIViewController {
     
     func setMemberDetailData(member: Member) {
         imageView?.image = UIImage.init(data: member.picture)
+        imageView?.contentMode = .scaleAspectFill
+        imageView?.layer.cornerRadius = (imageView?.frame.size.width)! / 2
+        imageView?.layer.borderWidth = 2.0
+        imageView?.layer.borderColor = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
         nameLabel?.text = member.name
         positionLabel?.text = member.position
         aboutLabel?.text = member.about
