@@ -18,7 +18,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var showHideButton: UIButton!
     
+    var passwordVisible = false
+
     // Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
     func validateFields() -> String? {
         
@@ -39,6 +42,18 @@ class SignUpViewController: UIViewController {
         }
         
         return nil
+    }
+    
+    @IBAction func showHide(_ sender: Any) {
+        if passwordVisible {
+            passwordTextField.isSecureTextEntry = true
+            showHideButton.setTitle("Show", for: .normal)
+            passwordVisible = false
+        } else {
+            passwordTextField.isSecureTextEntry = false
+            showHideButton.setTitle("Hide", for: .normal)
+            passwordVisible = true
+        }
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
@@ -113,6 +128,7 @@ class SignUpViewController: UIViewController {
     
     func setUpElements() {
         // initially setup view so error message does not show and do styling
+        passwordTextField.clearsOnBeginEditing = false
         
         errorLabel.alpha = 0
         

@@ -123,6 +123,8 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
     }
     
     func setUpElements() {
+        passwordTextField.clearsOnBeginEditing = false
+        
         errorLabel.alpha = 0
         
         Utilities.styleTextField(emailTextField)
