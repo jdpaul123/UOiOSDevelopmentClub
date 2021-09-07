@@ -141,7 +141,7 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate,
         Utilities.styleFilledButton(logInButton)
     }
     
-    // UITextField Delegate Functions
+    // MARK: UITextField Delegate Functions
     
     // For hiding the keyboard on return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
