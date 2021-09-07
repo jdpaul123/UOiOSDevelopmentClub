@@ -16,6 +16,9 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var showHideButton: UIButton!
+    
+    var passwordVisible = false
     
     let dataRepository: DataRepository
     
@@ -76,6 +79,19 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
         }
     }
     
+    
+    @IBAction func showHide(_ sender: Any) {
+        if passwordVisible {
+            passwordTextField.isSecureTextEntry = true
+            showHideButton.setTitle("Show", for: .normal)
+            passwordVisible = false
+        } else {
+            passwordTextField.isSecureTextEntry = false
+            showHideButton.setTitle("Hide", for: .normal)
+            passwordVisible = true
+        }
+    }
+    
     func transitionBackToWelcome() {
         popTo(WelcomeViewController.self)
     }
@@ -103,7 +119,6 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpElements()
     }
     
