@@ -79,6 +79,11 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         tableView.accessibilityIdentifier = "event-tableview"
     }
     
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+        // Diffable data source
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         if Injector.shared.isSignedInAsAdmin == false {
             addMemberButton.makeDisabledAndInvisable()

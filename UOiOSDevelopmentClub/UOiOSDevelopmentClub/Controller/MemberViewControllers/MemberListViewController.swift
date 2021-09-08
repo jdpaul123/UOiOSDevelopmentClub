@@ -28,7 +28,6 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         self.viewControllerFactory = viewControllerFactory
         
         super.init(coder: coder)
-        resultsController = dataRepository.memberResultsController(delegate: self)
     }
 
     // MARK: IBSequeAction
@@ -78,14 +77,14 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         
         tableView.backgroundColor = UIColor(.black)
-        
+        resultsController = dataRepository.memberResultsController(delegate: self)
+
         // Gets rid of extra horizontal lines after the last cell in the table view
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.accessibilityIdentifier = "members-tableview"
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
         
         if Injector.shared.isSignedInAsAdmin == false {
             addMemberButton.makeDisabledAndInvisable()
@@ -93,5 +92,9 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         else {
             addMemberButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
         }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
     }
 }
