@@ -1562,7 +1562,6 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="bFp-CG-OQc">
-                            <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="W5x-te-6he" id="s61-0d-GHR"/>
                             </connections>
