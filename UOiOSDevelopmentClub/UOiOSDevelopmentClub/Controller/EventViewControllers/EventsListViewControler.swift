@@ -80,7 +80,8 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.reloadData()
+        tableView?.reloadData()
+        // TODO ^^^ SOMETIMES GETTING A CRASH HERE. I THINK THE ? FIXES IT FOR NOW
         // Diffable data source
     }
     
