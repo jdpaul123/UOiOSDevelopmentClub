@@ -10,6 +10,22 @@ import Foundation
 @testable import UOiOSDevelopmentClub
 
 class MockDataRepository: DataRepository {
+    func eventOrMemberEdited() {
+        eventOrMemberEditedHandler?()
+    }
+    
+    func addAdmin(email: String, uid: String) {
+        addAdminHandler?(email, uid)
+    }
+    
+    func delete(_ admin: Admin) {
+        deleteAdminHandler?(admin)
+    }
+    
+    func adminResultsController(delegate: NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Admin>? {
+        adminResultsControllerHandler?(delegate)
+    }
+    
     func addEvent(to location: Location, title: String, about: String, date: Date, picture: Data) {
         addEventHandler?(location, title, about, date, picture)
     }
@@ -47,16 +63,21 @@ class MockDataRepository: DataRepository {
     }
     
     // MARK: Properties
+    var eventOrMemberEditedHandler: (() -> Void)?
+    
     var addEventHandler: ((Location, String, String, Date, Data) -> Void)?
     var addMembersHandler: ((String, String, String, String, String, Data) -> Void)?
     var addLocationHandler: ((String, String, String, String, String, String)->Void)?
+    var addAdminHandler: ((String, String) -> Void)?
     
     var deleteEvent: ((Event) -> Void)?
     var deleteMember: ((Member) -> Void)?
     var deleteLocation: ((Location) -> Void)?
+    var deleteAdminHandler: ((Admin) -> Void)?
     
     var eventResultsControllerHandler: ((NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Event>?)?
     var memberResultsControllerHandler: ((NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Member>?)?
     var locationResultsControllerHandler: ((NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Location>?)?
+    var adminResultsControllerHandler: ((NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Admin>?)?
     
 }

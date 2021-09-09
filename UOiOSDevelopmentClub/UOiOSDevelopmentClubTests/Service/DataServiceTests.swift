@@ -14,25 +14,25 @@ class DataServiceTests: XCTestCase {
     // MARK: Test Life Cycle
     override func setUp() {
         persistentContainer = PersistentContainerHelper.shared.createPersistentContainer(shouldLoadStores: false)
-        dataService = DataService(persistentContainer: persistentContainer)
+        dataRepository = DataService(persistentContainer: persistentContainer)
         
         //let _ = expectation(forNotification: .dataRepositoryInitializationFinished, object: dataService)
         //waitForExpectations(timeout: 1)
     }
     
     override func tearDown() {
-        dataService = nil
+        dataRepository = nil
         persistentContainer = nil
     }
 
     
     // MARK: Properties
     var persistentContainer: NSPersistentContainer!
-    var dataService: DataService!
+    var dataRepository: DataRepository!
     
     // MARK: Tests
     func testAddMember() throws {
-        dataService.addMember(about: "Test About Message", position: "Test Position", email: "TestEmail@TestEmail.com", phone: "(TES)TPH-ONE1", name: "Test Name", picture: Data.init())
+        dataRepository.addMember(about: "Test About Message", position: "Test Position", email: "TestEmail@TestEmail.com", phone: "(TES)TPH-ONE1", name: "Test Name", picture: Data.init())
 
         // Validate results
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
@@ -54,7 +54,7 @@ class DataServiceTests: XCTestCase {
         try persistentContainer.viewContext.save()
         
         // Perform task
-        dataService.delete(member)
+        dataRepository.delete(member)
         
         // Validate results
         let fetchRequest : NSFetchRequest<Member> = Member.fetchRequest()
@@ -70,7 +70,7 @@ class DataServiceTests: XCTestCase {
     }
 
     func testAddLocation() throws {
-        dataService.addLocation(with: [], address: "Test Address", city: "Test City", country: "Test Country", state: "Test State", zipCode: "Test Zip Code", directionNotes: "Test Directions")
+        dataRepository.addLocation(with: [], address: "Test Address", city: "Test City", country: "Test Country", state: "Test State", zipCode: "Test Zip Code", directionNotes: "Test Directions")
 
         // Validate results
         let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
@@ -91,7 +91,7 @@ class DataServiceTests: XCTestCase {
         try persistentContainer.viewContext.save()
         
         // Perform task
-        dataService.delete(location)
+        dataRepository.delete(location)
         
         // Validate results
         let fetchRequest : NSFetchRequest<Location> = Location.fetchRequest()
@@ -107,7 +107,8 @@ class DataServiceTests: XCTestCase {
     }
 
     func testAddEvent() throws {
-        dataService.addEvent(to: Location.init(), title: "Test Title", about: "Test About", date: Date.init(), picture: Data.init())
+        let location = Location(address: "", city: "", country: "", state: "", zipCode: "", directionsNotes: "", context: persistentContainer.viewContext)
+        dataRepository.addEvent(to: location, title: "Test Title", about: "Test About", date: Date.init(), picture: Data.init())
         // Validate results
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
         let context = persistentContainer.newBackgroundContext()
@@ -127,7 +128,7 @@ class DataServiceTests: XCTestCase {
         try persistentContainer.viewContext.save()
         
         // Perform task
-        dataService.delete(event)
+        dataRepository.delete(event)
         
         // Validate results
         let fetchRequest : NSFetchRequest<Event> = Event.fetchRequest()
@@ -153,7 +154,7 @@ class DataServiceTests: XCTestCase {
         let _ = Member(about: "Test About Message", email: "TestEmail@TestEmail.com", name: "Test Name", phone: "(TES)TPH-ONE1", picture: Data.init(), position: "Test Position", context: persistentContainer.viewContext)
         try persistentContainer.viewContext.save()
         
-        let resultsController = dataService.memberResultsController(delegate: delegate)
+        let resultsController = dataRepository.memberResultsController(delegate: delegate)
         
         XCTAssertTrue(resultsController?.delegate === delegate, "Results controller delegate was unexpected instance")
         
@@ -183,7 +184,7 @@ class DataServiceTests: XCTestCase {
         let _ = Location(address: "Test Address", city: "Test City", country: "Test Country", state: "Test State", zipCode: "Test Zip Code", directionsNotes: "Test Directions", context: persistentContainer.viewContext)
         try persistentContainer.viewContext.save()
         
-        let resultsController = dataService.locationResultsController(delegate: delegate)
+        let resultsController = dataRepository.locationResultsController(delegate: delegate)
         
         XCTAssertTrue(resultsController?.delegate === delegate, "Results controller delegate was unexpected instance")
         
@@ -213,7 +214,7 @@ class DataServiceTests: XCTestCase {
         let _ = Event(title: "Test Title", about: "Test About", date: Date.init(), picture: Data.init(), context: persistentContainer.viewContext)
         try persistentContainer.viewContext.save()
         
-        let resultsController = dataService.eventResultsController(delegate: delegate)
+        let resultsController = dataRepository.eventResultsController(delegate: delegate)
         
         XCTAssertTrue(resultsController?.delegate === delegate, "Results controller delegate was unexpected instance")
         
