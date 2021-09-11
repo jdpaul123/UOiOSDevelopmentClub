@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+## JD Added for .DS_Store
+.DS_STore
+
 ## User settings
 xcuserdata/
 
