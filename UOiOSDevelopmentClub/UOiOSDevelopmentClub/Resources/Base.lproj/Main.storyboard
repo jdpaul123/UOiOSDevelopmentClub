@@ -915,7 +915,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="t42-uI-yDz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="systemGreenColor"/>
                         </textAttributes>
@@ -938,7 +937,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Bbl-2q-iPc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="systemGreenColor"/>
                         </textAttributes>
@@ -961,7 +959,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qol-95-aGn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" systemColor="systemGreenColor"/>
                         </textAttributes>
