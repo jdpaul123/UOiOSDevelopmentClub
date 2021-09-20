@@ -14,8 +14,7 @@ struct Welcome: View {
     var body: some View {
         ScrollView {
             VStack {
-                
-                Text("The University of Oregon\niOS Development Club")
+                Text("The University of Oregon\nApp Development Club")
                     .padding(.all, 10)
                     .background(
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
