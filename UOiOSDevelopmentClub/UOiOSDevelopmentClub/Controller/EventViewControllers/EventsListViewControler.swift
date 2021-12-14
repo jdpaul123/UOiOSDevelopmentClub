@@ -71,7 +71,8 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = UIColor(.black)
+        // Got rid of black background
+        //tableView.backgroundColor = UIColor(.black)
         
         // Gets rid of extra horizontal lines after the last cell in the table view
         tableView.tableFooterView = UIView(frame: .zero)

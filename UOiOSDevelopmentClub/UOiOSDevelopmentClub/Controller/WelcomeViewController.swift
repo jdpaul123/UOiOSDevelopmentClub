@@ -39,7 +39,6 @@ class WelcomeViewController: UIViewController {
         view.addSubview(welcomeScreen.view)
         
         setupConstraints(welcomeScreen: welcomeScreen)
-        
     }
     
     @IBSegueAction private func createPickSignInOptionViewController(_ coder: NSCoder) -> PickSignInOptionViewController? {

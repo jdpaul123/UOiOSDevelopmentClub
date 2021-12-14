@@ -9,6 +9,10 @@ import UIKit
 import CoreData
 
 class MemberListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+    /*
+     Controlls the list view of executive members and advisors for the club.
+     */
+    
     // MARK: Properties
     // refresh control guidence from: https://cocoacasts.com/how-to-add-pull-to-refresh-to-a-table-view-or-collection-view
     private let refreshControl = UIRefreshControl()
@@ -76,7 +80,6 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = UIColor(.black)
         resultsController = dataRepository.memberResultsController(delegate: self)
 
         // Gets rid of extra horizontal lines after the last cell in the table view
