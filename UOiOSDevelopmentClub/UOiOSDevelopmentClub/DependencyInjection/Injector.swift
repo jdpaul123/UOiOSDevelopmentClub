@@ -18,13 +18,14 @@ class Injector: NSObject, NSFetchedResultsControllerDelegate {
     private override init() {
         viewFactory = ViewFactory()
         
-        let bundle = Bundle(for: Member.self)
+        let bundle = Bundle(for: Event.self)
         let modelURL = bundle.url(forResource: "UOiOSDevelopmentClub", withExtension: "momd")!
         managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)!
         persistentContainer = NSPersistentCloudKitContainer(name: "UOiOSDevelopmentClub", managedObjectModel: managedObjectModel)
         
         dataRepository = DataService(persistentContainer: persistentContainer)
         viewControllerFactory = ViewControllerFactory(viewFactory: viewFactory, dataRepository: dataRepository)
+        
         
         // Base case is that they are not an admin
         isSignedInAsAdmin = false
