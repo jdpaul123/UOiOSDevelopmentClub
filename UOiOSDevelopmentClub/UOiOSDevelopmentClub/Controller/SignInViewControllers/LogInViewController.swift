@@ -69,7 +69,9 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate,
                     
                     // Cycle through the admins and determine if this account is one
                     for admin in adminObjects {
-                        if admin.email == email {
+                        // TODO 12/14/2021 3:16 PM just added the isTrashed == false bit below
+                        // MAKE SURE THAT THIS WORKS ONCE CLOUD KIT IS FUNCTIONING AGAIN
+                        if admin.email == email && admin.isTrashed == false {
                             Injector.shared.isSignedInAsAdmin = true
                         }
                     }
@@ -78,7 +80,6 @@ class LogInViewController: UIViewController, NSFetchedResultsControllerDelegate,
             }
         }
     }
-    
     
     @IBAction func showHide(_ sender: Any) {
         if passwordVisible {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Admin" representedClassName=".Admin" syncable="YES">
         <attribute name="email" attributeType="String" defaultValueString="&quot;&quot;"/>
         <attribute name="isTrashed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -33,9 +33,9 @@
         <attribute name="position" attributeType="String" defaultValueString=""/>
     </entity>
     <elements>
+        <element name="Admin" positionX="-45" positionY="81" width="128" height="74"/>
         <element name="Event" positionX="-54" positionY="36" width="128" height="119"/>
         <element name="Location" positionX="-36" positionY="45" width="128" height="149"/>
         <element name="Member" positionX="-63" positionY="-18" width="128" height="134"/>
-        <element name="Admin" positionX="-45" positionY="81" width="128" height="74"/>
     </elements>
 </model>
