@@ -68,6 +68,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7mk-dG-m3U">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" rowHeight="166" id="p3U-FZ-dxi" customClass="MemberListCell" customModule="UOiOSDevelopmentClub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
@@ -286,6 +287,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="EfI-oQ-Fla" firstAttribute="top" secondItem="Kpj-kd-b7V" secondAttribute="top" id="BcF-2J-aoG"/>
                                     <constraint firstItem="EfI-oQ-Fla" firstAttribute="width" secondItem="Kpj-kd-b7V" secondAttribute="width" id="bJA-E8-grj"/>
@@ -337,6 +339,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Title" id="qHk-Dd-oL8">
                                 <cells>
@@ -751,6 +754,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WkW-SI-igR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="83" id="nT0-VT-DdY" customClass="EventListCell" customModule="UOiOSDevelopmentClub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
@@ -879,6 +883,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="weW-ZF-uZm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2l3-XW-8mk" firstAttribute="leading" secondItem="weW-ZF-uZm" secondAttribute="leading" constant="40" id="L8K-Ac-Pr9"/>
                             <constraint firstItem="eAi-Tn-jEq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hCU-EX-HFe" secondAttribute="leading" constant="40" id="M2M-xs-qr8"/>
@@ -1095,6 +1100,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F1z-Gp-xKi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bqu-cV-IAr" firstAttribute="trailing" secondItem="F1z-Gp-xKi" secondAttribute="trailing" id="42v-fL-UBT"/>
                             <constraint firstItem="Bqu-cV-IAr" firstAttribute="leading" secondItem="F1z-Gp-xKi" secondAttribute="leading" id="fGz-ni-2th"/>
@@ -1130,6 +1136,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Name" id="bKt-OX-9I0">
                                 <cells>
@@ -1369,6 +1376,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Name" id="zvh-nJ-beF">
                                 <cells>
@@ -1654,6 +1662,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3Y-vS-2Tm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xrp-9c-79W" firstAttribute="top" secondItem="d3Y-vS-2Tm" secondAttribute="top" constant="40" id="07b-1V-1s1"/>
                             <constraint firstItem="i59-Lf-Ycw" firstAttribute="top" secondItem="xrp-9c-79W" secondAttribute="bottom" constant="40" id="0mS-mG-Dzu"/>
@@ -1744,6 +1753,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xyL-5k-yJ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xyL-5k-yJ6" firstAttribute="trailing" secondItem="MRL-V8-iNb" secondAttribute="trailing" constant="40" id="8O5-Pm-l2y"/>
                             <constraint firstItem="Frp-b9-b3Y" firstAttribute="top" secondItem="MRL-V8-iNb" secondAttribute="top" id="B3s-QO-n2d"/>
