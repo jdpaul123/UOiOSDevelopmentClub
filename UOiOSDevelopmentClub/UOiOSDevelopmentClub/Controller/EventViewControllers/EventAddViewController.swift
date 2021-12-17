@@ -32,6 +32,8 @@ class EventAddViewController: UITableViewController, NSFetchedResultsControllerD
         self.dataRepository = dataRepository
         super.init(coder: coder)
         
+        // MARK: BUG TODO -- If there are no location entities the view cannot load any data \
+        // into the locations field which causes the app to crash
         locationResultsController = dataRepository.locationResultsController(delegate: self)
         // select the first location that will show in the picker as the default location
         selectedLocation = locationResultsController?.fetchedObjects?[0] ?? Location.init()
