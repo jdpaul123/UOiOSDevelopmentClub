@@ -20,6 +20,9 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet weak var addMemberButton: UIBarButtonItem!
     
+    // Label for when we are loading in data
+    let loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+    
     var resultsController: NSFetchedResultsController<Member>? = nil
     let dataRepository: DataRepository
     
@@ -64,6 +67,10 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         let member = resultsController!.object(at: indexPath)
         
         cell.setCellData(member: member)
+        
+        // Get rid of loading label because everything is loaded
+        loadingLabel.removeFromSuperview()
+        
         return cell
     }
     
@@ -94,6 +101,23 @@ class MemberListViewController: UIViewController, UITableViewDataSource, UITable
         }
         else {
             addMemberButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
+        }
+        
+        // Show loading label if there is no data saved
+        if tableView.numberOfRows(inSection: 0) == 0 {
+            
+            loadingLabel.textAlignment = .center
+            loadingLabel.text = "Data loading, please wait"
+            
+            self.view.addSubview(loadingLabel)
+            
+            loadingLabel.numberOfLines = 0
+            
+            // Constraints
+            loadingLabel.translatesAutoresizingMaskIntoConstraints = false
+            loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive =  true
+            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive =  true
+            
         }
     }
     

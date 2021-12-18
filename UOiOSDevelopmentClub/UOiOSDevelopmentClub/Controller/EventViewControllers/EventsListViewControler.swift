@@ -17,6 +17,10 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     var resultsController: NSFetchedResultsController<Event>? = nil
     let dataRepository: DataRepository
     
+    // Label for when we are loading in data
+    let loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -64,6 +68,10 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         let event = resultsController!.object(at: indexPath)
         
         cell.setCellData(event: event)
+        
+        // Get rid of loading label because everything is loaded
+        loadingLabel.removeFromSuperview()
+        
         return cell
     }
     
@@ -92,6 +100,24 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         }
         else {
             addMemberButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
+        }
+        
+        
+        // Show loading label if there is no data saved
+        if tableView.numberOfRows(inSection: 0) == 0 {
+            
+            loadingLabel.textAlignment = .center
+            loadingLabel.text = "Data loading, please wait"
+            
+            self.view.addSubview(loadingLabel)
+            
+            loadingLabel.numberOfLines = 0
+            
+            // Constraints
+            loadingLabel.translatesAutoresizingMaskIntoConstraints = false
+            loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive =  true
+            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive =  true
+            
         }
     }
 }
