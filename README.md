@@ -6,11 +6,11 @@ There are also admin capabilities through and authentication and authorization s
 An approved admin can add, delete, and edit events and members/advisors entities.
 
 Features:
-- Authenticaiton
+- Authenticaiton using Firestore Auth
     - Account setup
     - Account sign in
     - Acount sign out
-    - Authorization checks
+    - Authorization checks using Cloud Kit to authorize account emails
 - Editing capabilities for member and event entities in app for authorized admin users
 - Viewing of member and event entities for all users
 - Core data stored data that is fetched from a Cloud Kit store
@@ -18,8 +18,8 @@ Features:
 
 Tecnologies used:
 - Swift language
-- UI Kit
-- Swift UI
+- UIKit
+- SwiftUI
 - Storyboards
 - Core Data with public Cloud Kit
 - Firebase for storing memebr data
