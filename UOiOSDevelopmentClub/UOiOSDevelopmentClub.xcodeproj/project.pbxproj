@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5201D27B28075F0700902068 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27A28075F0700902068 /* LocationListViewController.swift */; };
+		5201D27D28075F1400902068 /* LocationEditlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27C28075F1400902068 /* LocationEditlViewController.swift */; };
+		5201D27F280761C900902068 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27E280761C900902068 /* LocationListCell.swift */; };
 		5218646926D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646826D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift */; };
 		5218646B26D80CD200118DC5 /* EventAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646A26D80CD200118DC5 /* EventAddViewController.swift */; };
 		5218646D26D80CDB00118DC5 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646C26D80CDB00118DC5 /* EventEditViewController.swift */; };
@@ -45,6 +48,7 @@
 		52AE72CF26E1D09000E5FFD7 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */; };
 		52AE72D126E1DC3400E5FFD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */; };
 		52B2A3AC26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */; };
+		52E3EDB128076F82004AA72A /* LocationAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3EDB028076F82004AA72A /* LocationAddViewController.swift */; };
 		52FE029E26B8B83900158FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE029D26B8B83900158FA2 /* AppDelegate.swift */; };
 		52FE02A026B8B83900158FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE029F26B8B83900158FA2 /* SceneDelegate.swift */; };
 		52FE02A526B8B83900158FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FE02A326B8B83900158FA2 /* Main.storyboard */; };
@@ -86,6 +90,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5201D27A28075F0700902068 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
+		5201D27C28075F1400902068 /* LocationEditlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditlViewController.swift; sourceTree = "<group>"; };
+		5201D27E280761C900902068 /* LocationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListCell.swift; sourceTree = "<group>"; };
 		5218646826D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PopingMultipleViews.swift"; sourceTree = "<group>"; };
 		5218646A26D80CD200118DC5 /* EventAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAddViewController.swift; sourceTree = "<group>"; };
 		5218646C26D80CDB00118DC5 /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +128,7 @@
 		52AE72CE26E1D09000E5FFD7 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
 		52AE72D026E1DC3400E5FFD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtonItem+Makeinvisable.swift"; sourceTree = "<group>"; };
+		52E3EDB028076F82004AA72A /* LocationAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAddViewController.swift; sourceTree = "<group>"; };
 		52FE029A26B8B83900158FA2 /* UOiOSDevelopmentClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UOiOSDevelopmentClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FE029D26B8B83900158FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FE029F26B8B83900158FA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +204,9 @@
 				52FE02EE26BCBE6700158FA2 /* EventDetailViewController.swift */,
 				5218646A26D80CD200118DC5 /* EventAddViewController.swift */,
 				5218646C26D80CDB00118DC5 /* EventEditViewController.swift */,
+				5201D27A28075F0700902068 /* LocationListViewController.swift */,
+				52E3EDB028076F82004AA72A /* LocationAddViewController.swift */,
+				5201D27C28075F1400902068 /* LocationEditlViewController.swift */,
 			);
 			path = EventViewControllers;
 			sourceTree = "<group>";
@@ -408,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				52FE02EC26BCBA6300158FA2 /* EventListCell.swift */,
+				5201D27E280761C900902068 /* LocationListCell.swift */,
 				5284537B26C0AEDA00397144 /* MemberListCell.swift */,
 				5284537326BEF57500397144 /* EventDetailView.swift */,
 				52FE02DA26B8FD8500158FA2 /* Welcome.swift */,
@@ -570,10 +582,12 @@
 				5218646926D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift in Sources */,
 				5228DC6C26E1B02A00C55429 /* LogInViewController.swift in Sources */,
 				52FE02DF26B9048F00158FA2 /* Injector.swift in Sources */,
+				5201D27F280761C900902068 /* LocationListCell.swift in Sources */,
 				5284537C26C0AEDA00397144 /* MemberListCell.swift in Sources */,
 				52FE02DD26B8FF0800158FA2 /* WelcomeViewController.swift in Sources */,
 				52FE02E526B9B45300158FA2 /* ViewControllerFactory.swift in Sources */,
 				529ACC0926D42F5800F337D2 /* MemberAddViewController.swift in Sources */,
+				5201D27B28075F0700902068 /* LocationListViewController.swift in Sources */,
 				5284536C26BCECB600397144 /* Event.swift in Sources */,
 				5284536A26BCECB600397144 /* Location.swift in Sources */,
 				5284537A26BF4B8000397144 /* MemberListViewController.swift in Sources */,
@@ -598,8 +612,10 @@
 				5284536B26BCECB600397144 /* Location+CoreDataProperties.swift in Sources */,
 				523F438526C9D61500CD8203 /* UIColor+RGBAndHex.swift in Sources */,
 				5284537626BEF6EC00397144 /* UIView+DateAndTimeFormatting.swift in Sources */,
+				5201D27D28075F1400902068 /* LocationEditlViewController.swift in Sources */,
 				52AE72CF26E1D09000E5FFD7 /* FormUtilities.swift in Sources */,
 				5284537426BEF57500397144 /* EventDetailView.swift in Sources */,
+				52E3EDB128076F82004AA72A /* LocationAddViewController.swift in Sources */,
 				52FE02A826B8B83900158FA2 /* UOiOSDevelopmentClub.xcdatamodeld in Sources */,
 				52FE02F126BCBE7400158FA2 /* MemberDetailViewContoller.swift in Sources */,
 				52460FB626ED539D008D1DFB /* Admin.swift in Sources */,

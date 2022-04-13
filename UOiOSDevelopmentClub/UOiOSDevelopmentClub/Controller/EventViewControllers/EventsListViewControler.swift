@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class EventsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     // MARK: Properties
+    @IBOutlet weak var locationsButton: UIBarButtonItem!
     @IBOutlet weak var addMemberButton: UIBarButtonItem!
     let viewControllerFactory: ViewControllerFactory
     @IBOutlet private weak var tableView: UITableView!
@@ -46,6 +47,10 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBSegueAction private func createEventAddViewController(_ coder: NSCoder) -> EventAddViewController? {
         viewControllerFactory.eventAddViewController(coder)
+    }
+    
+    @IBSegueAction private func createLocationListViewController(_ coder: NSCoder) -> LocationListViewController? {
+        viewControllerFactory.locationListViewController(coder)
     }
     
     // MARK: UITableViewDataSource Functions
@@ -97,9 +102,11 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewWillAppear(_ animated: Bool) {
         if Injector.shared.isSignedInAsAdmin == false {
             addMemberButton.makeDisabledAndInvisable()
+            locationsButton.makeDisabledAndInvisable()
         }
         else {
             addMemberButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
+            locationsButton.makeEnabledAndVisable(red: 37/255, green: 150/255, blue: 190/255)
         }
         
         

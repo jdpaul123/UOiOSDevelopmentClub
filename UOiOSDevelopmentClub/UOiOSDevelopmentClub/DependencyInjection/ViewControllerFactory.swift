@@ -67,6 +67,18 @@ class ViewControllerFactory {
         MemberEditViewController(coder, member: member, dataRepository: dataRepository)
     }
     
+    func locationListViewController(_ coder: NSCoder) -> LocationListViewController? {
+        LocationListViewController(coder, dataRepository: dataRepository, viewControllerFactory: self)
+    }
+    
+    func locationAddViewController(_ coder: NSCoder) -> LocationAddViewController? {
+        LocationAddViewController(coder: coder, dataRepository: dataRepository)
+    }
+    
+    func locationEditViewController(_ coder: NSCoder, location: Location) -> LocationEditViewController? {
+        LocationEditViewController(coder: coder, dataRepository: dataRepository, location: location)
+    }
+ 
     let viewFactory: ViewFactory
     let dataRepository: DataRepository
 }
