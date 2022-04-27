@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import EventKit
+import EventKitUI
 
-class EventDetailViewController: UIViewController {
-
+class EventDetailViewController: UIViewController, EKEventEditViewDelegate {
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        // Tell the app to close the delegate
+        controller.dismiss(animated: true)
+    }
+    
 
     // MARK: Properties
     private let event: Event
     let viewControllerFactory: ViewControllerFactory
+    let eventStore = EKEventStore()
+    var time = Date()
     
     @IBOutlet var detailView: EventDetailView!
     @IBOutlet weak var editMemberButton: UIBarButtonItem!
+    @IBOutlet weak var addEventToCalendarButton: UIButton!
     
     
     // MARK: Initializer
@@ -35,6 +44,27 @@ class EventDetailViewController: UIViewController {
         detailView.setEventDetailData(event: event)
     }
 
+    @IBAction func AddEventToCalendarPressed(_ sender: Any) {
+        // For adding the event to a users calendar
+        eventStore.requestAccess( to: EKEntityType.event, completion:{(granted, error) in
+            DispatchQueue.main.async {
+                if (granted) && (error == nil) {
+                    let eventToAdd = EKEvent(eventStore: self.eventStore)
+                    eventToAdd.title = self.event.title
+                    eventToAdd.startDate = self.event.date
+                    eventToAdd.notes = self.event.about
+                    eventToAdd.location = "\(self.event.location.address), \(self.event.location.city), \(self.event.location.zipCode), \(self.event.location.state)"
+                    eventToAdd.endDate = self.event.date + 60 * 60 // make the end time 60 minutes
+                    let eventController = EKEventEditViewController()
+                    eventController.event = eventToAdd
+                    eventController.eventStore = self.eventStore
+                    eventController.editViewDelegate = self
+                    self.present(eventController, animated: true, completion: nil)
+                }
+            }
+        })
+    }
+    
     @IBSegueAction private func createEventEditViewController(_ coder: NSCoder) -> EventEditViewController? {
         return viewControllerFactory.eventEditViewController(coder, event: event)
     }
