@@ -54,6 +54,7 @@ class EventDetailViewController: UIViewController, EKEventEditViewDelegate {
                     eventToAdd.startDate = self.event.date
                     eventToAdd.notes = self.event.about
                     eventToAdd.location = "\(self.event.location.address), \(self.event.location.city), \(self.event.location.zipCode), \(self.event.location.state)"
+                        
                     eventToAdd.endDate = self.event.date + 60 * 60 // make the end time 60 minutes
                     let eventController = EKEventEditViewController()
                     eventController.event = eventToAdd

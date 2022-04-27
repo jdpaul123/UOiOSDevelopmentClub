@@ -10,7 +10,6 @@
 		5201D27B28075F0700902068 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27A28075F0700902068 /* LocationListViewController.swift */; };
 		5201D27D28075F1400902068 /* LocationEditlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27C28075F1400902068 /* LocationEditlViewController.swift */; };
 		5201D27F280761C900902068 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201D27E280761C900902068 /* LocationListCell.swift */; };
-		52148EA82819C73A004C837B /* NSAttributedString+Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52148EA72819C73A004C837B /* NSAttributedString+Hyperlink.swift */; };
 		5218646926D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646826D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift */; };
 		5218646B26D80CD200118DC5 /* EventAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646A26D80CD200118DC5 /* EventAddViewController.swift */; };
 		5218646D26D80CDB00118DC5 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218646C26D80CDB00118DC5 /* EventEditViewController.swift */; };
@@ -94,7 +93,6 @@
 		5201D27A28075F0700902068 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		5201D27C28075F1400902068 /* LocationEditlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditlViewController.swift; sourceTree = "<group>"; };
 		5201D27E280761C900902068 /* LocationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListCell.swift; sourceTree = "<group>"; };
-		52148EA72819C73A004C837B /* NSAttributedString+Hyperlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Hyperlink.swift"; sourceTree = "<group>"; };
 		5218646826D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PopingMultipleViews.swift"; sourceTree = "<group>"; };
 		5218646A26D80CD200118DC5 /* EventAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAddViewController.swift; sourceTree = "<group>"; };
 		5218646C26D80CDB00118DC5 /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 				5284537126BDC2E000397144 /* Notification+UOiOSDevelopmentClub.swift */,
 				52B2A3AB26E3437E00DF8AF7 /* UIButtonItem+Makeinvisable.swift */,
 				523F438426C9D61500CD8203 /* UIColor+RGBAndHex.swift */,
-				52148EA72819C73A004C837B /* NSAttributedString+Hyperlink.swift */,
 				5218646826D70E1400118DC5 /* UIViewController+PopingMultipleViews.swift */,
 				5284537726BF3F1D00397144 /* UIImage+DataMethod.swift */,
 				5284537526BEF6EC00397144 /* UIView+DateAndTimeFormatting.swift */,
@@ -623,7 +620,6 @@
 				52FE02F126BCBE7400158FA2 /* MemberDetailViewContoller.swift in Sources */,
 				52460FB626ED539D008D1DFB /* Admin.swift in Sources */,
 				52FE02EF26BCBE6700158FA2 /* EventDetailViewController.swift in Sources */,
-				52148EA82819C73A004C837B /* NSAttributedString+Hyperlink.swift in Sources */,
 				52FE02ED26BCBA6300158FA2 /* EventListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +809,7 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5MHQLWW6Y5;
 				INFOPLIST_FILE = UOiOSDevelopmentClub/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,6 +834,7 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5MHQLWW6Y5;
 				INFOPLIST_FILE = UOiOSDevelopmentClub/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
